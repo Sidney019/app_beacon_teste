@@ -2,14 +2,9 @@
 
 import 'package:flutter/material.dart';
 
-class _ModProdutos extends StatefulWidget {
-  const _ModProdutos({Key? key}) : super(key: key);
+class ModProdutosPage extends StatelessWidget {
+  const ModProdutosPage({super.key});
 
-  @override
-  State<_ModProdutos> createState() => _ModProdutosState();
-}
-
-class _ModProdutosState extends State<_ModProdutos> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -4,8 +4,9 @@ import 'package:app_beacon_teste/pages/lista.desejo.dart';
 import 'package:app_beacon_teste/pages/perfil.page.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class PaginaPrincipalCliente extends StatelessWidget {
+  const PaginaPrincipalCliente({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -56,13 +57,7 @@ class HomePage extends StatelessWidget {
                   subtitle: const Text(""),
                   trailing: const Icon(Icons.arrow_forward),
                   onTap: () {
-                    Navigator.push( //função levara para lista de desejos
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const ListaDesejo(),
-                      ),
-                    );
-                  },
+                    },
                 ),
               ]
           ),

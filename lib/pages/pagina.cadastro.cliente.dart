@@ -1,8 +1,8 @@
-import 'package:app_beacon_teste/pages/home.page.vendedor.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_multi_formatter/flutter_multi_formatter.dart';
 
-class SignupVendedorPage extends StatelessWidget {
-  const SignupVendedorPage({super.key});
+class PaginaCadastroCliente extends StatelessWidget {
+  const PaginaCadastroCliente({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class SignupVendedorPage extends StatelessWidget {
                     stops: [0.3, 1.0],
                     colors: [
                       Color(0xFF9FA8DA),
-                      Color(0XFF3F51B5)
+                    Color(0XFF3F51B5)
                     ],
                   ),
                   border: Border.all(
@@ -56,22 +56,20 @@ class SignupVendedorPage extends StatelessWidget {
               ),
             ),
 
-            const SizedBox(height: 5),
+            const SizedBox(height: 20),
             TextFormField(
               keyboardType: TextInputType.text,
               decoration: const InputDecoration(
-                labelText: "Nome da Loja:",
+                labelText: "Nome:",
                 labelStyle: TextStyle(
                   color: Colors.black38,
                   fontWeight: FontWeight.w400,
-                  fontSize: 20,
-                  //height: -0,
-                ),
+                  fontSize: 20),
               ),
               style: const TextStyle(fontSize: 20),
             ),
 
-            const SizedBox(height: 5),
+            const SizedBox(height: 10),
             TextFormField(
               keyboardType: TextInputType.emailAddress,
               decoration: const InputDecoration(
@@ -79,74 +77,73 @@ class SignupVendedorPage extends StatelessWidget {
                 labelStyle: TextStyle(
                   color: Colors.black38,
                   fontWeight: FontWeight.w400,
-                  fontSize: 20,
-                ),
+                  fontSize: 20),
               ),
               style: const TextStyle(fontSize: 20),
             ),
 
-            const SizedBox(height: 5),
+            const SizedBox(height: 10),
             TextFormField(
               keyboardType: TextInputType.text,
-              obscureText: false,
               decoration: const InputDecoration(
                 labelText: "Endereço:",
                 labelStyle: TextStyle(
                   color: Colors.black38,
                   fontWeight: FontWeight.w400,
-                  fontSize: 20,
-                ),
+                  fontSize: 20),
               ),
               style: const TextStyle(fontSize: 20),
             ),
 
-            const SizedBox(height: 1),
-            const SizedBox(height: 1),
+            const SizedBox(height: 10),
             TextFormField(
-              keyboardType: TextInputType.number,
+              keyboardType: TextInputType.text,
               decoration: const InputDecoration(
-                labelText: "CNPJ:",
+                labelText: "Numero:",
                 labelStyle: TextStyle(
-                  color: Colors.black38,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 20,
-                  //height: -0,
-                ),
+                    color: Colors.black38,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 20),
               ),
               style: const TextStyle(fontSize: 20),
             ),
 
-            const SizedBox(height: 5),
-            const SizedBox(height: 5),
+            SizedBox(height: 10),
             TextFormField(
-              keyboardType: TextInputType.number,
+              maxLength: 15,
+              keyboardType: TextInputType.phone,
               decoration: const InputDecoration(
                 labelText: "Telefone:",
                 labelStyle: TextStyle(
                   color: Colors.black38,
                   fontWeight: FontWeight.w400,
                   fontSize: 20,
-                  //height: -0,
+                ),
+              ),
+              style: const TextStyle(fontSize: 20),
+              autocorrect: true,
+              inputFormatters: [
+                MaskedInputFormatter('(##) #####-####')
+              ],
+            ),
+
+            const SizedBox(height: 5),
+            TextFormField(
+              maxLength: 8,
+              keyboardType: TextInputType.text,
+              obscureText: true,
+              decoration: const InputDecoration(
+                labelText: "Senha:",
+                labelStyle: TextStyle(
+                  color: Colors.black38,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 20,
                 ),
               ),
               style: const TextStyle(fontSize: 20),
             ),
 
-        const SizedBox(height: 5),
-        TextFormField(
-          keyboardType: TextInputType.text,
-          obscureText: false,
-          decoration: const InputDecoration(
-            labelText: "Senha:",
-            labelStyle: TextStyle(
-              color: Colors.black38,
-              fontWeight: FontWeight.w400,
-              fontSize: 20,
-            ),
-          ),
-          style: const TextStyle(fontSize: 20),
-        ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 15),
             Container(
               height: 60,
               alignment: Alignment.centerLeft,
@@ -175,14 +172,7 @@ class SignupVendedorPage extends StatelessWidget {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => HomePageVendedor(),
-                        ),
-                    );
-                  },
+                  onPressed: () => {},
                 ),
               ),
             ),

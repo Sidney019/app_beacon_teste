@@ -1,18 +1,13 @@
-
-import 'package:app_beacon_teste/pages/home.page.dart';
-import 'package:app_beacon_teste/pages/signup.page.dart';
-import 'package:app_beacon_teste/pages/signup.vendedor.page.dart';
+import 'package:app_beacon_teste/pages/pagina.principal.vendedor.dart';
+import 'package:app_beacon_teste/pages/pagina.principal.cliente.dart';
+import 'package:app_beacon_teste/pages/pagina.cadastro.cliente.dart';
+import 'package:app_beacon_teste/pages/pagina.cadastro.vendedor.dart';
 import 'package:app_beacon_teste/pages/reset-password.page.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class PaginaLogin extends StatelessWidget {
+  const PaginaLogin({super.key});
 
-  @override
-  State<LoginPage> createState() => _LoginPageState();
-}
-
-class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -91,6 +86,7 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(
               height: 40,
             ),
+
             Container(
               height: 60,
               alignment: Alignment.centerLeft,
@@ -121,14 +117,13 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         textAlign: TextAlign.right,
                       ),
-
                     ],
                   ),
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const HomePage(),
+                        builder: (context) => PaginaPrincipalCliente(),
                       ),
                     );
                   },
@@ -156,7 +151,7 @@ class _LoginPageState extends State<LoginPage> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const SignupPage(),
+                      builder: (context) => PaginaCadastroCliente(),
                     ),
                   );
                 },
@@ -179,7 +174,7 @@ class _LoginPageState extends State<LoginPage> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => SignupVendedorPage(),
+                        builder: (context) => PaginaCadastroVendedor(),
                       ),
                   );
                 }

@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
-class ListaDesejo extends StatefulWidget{
-  const ListaDesejo({Key? key}) : super(key: key);
+class _ListaDesejo extends StatefulWidget{
+  const _ListaDesejo({Key? key}) : super(key: key);
 
   @override
-  State<ListaDesejo> createState() => _ListaDesejoState();
+  State<_ListaDesejo> createState() => _ListaDesejoState();
 }
 
-class _ListaDesejoState extends State<ListaDesejo> {
+class _ListaDesejoState extends State<_ListaDesejo> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

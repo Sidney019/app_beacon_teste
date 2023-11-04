@@ -1,8 +1,12 @@
+
+
 import 'package:app_beacon_teste/pages/mod.produtos.page.dart';
-import 'package:app_beacon_teste/pages/login.page.dart';
+import 'package:app_beacon_teste/pages/pagina.login.dart';
 import 'package:flutter/material.dart';
 
-class HomePageVendedor extends StatelessWidget {
+class PaginaPrincipalVendedor extends StatelessWidget {
+  const PaginaPrincipalVendedor({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,7 +49,7 @@ class HomePageVendedor extends StatelessWidget {
                   Navigator.push(
                   context,
                       MaterialPageRoute(
-                          builder: (context) => _ModProdutosPage(),
+                          builder: (context) => ModProdutosPage(),
                       )
                   );
                 },
