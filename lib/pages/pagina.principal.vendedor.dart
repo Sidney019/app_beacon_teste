@@ -1,7 +1,8 @@
 
 
-import 'package:app_beacon_teste/pages/mod.produtos.page.dart';
+import 'package:app_beacon_teste/pages/cadastro.produtos.dart';
 import 'package:app_beacon_teste/pages/pagina.login.dart';
+import 'package:app_beacon_teste/pages/control.funcionarios.dart';
 import 'package:flutter/material.dart';
 
 class PaginaPrincipalVendedor extends StatelessWidget {
@@ -33,10 +34,16 @@ class PaginaPrincipalVendedor extends StatelessWidget {
               ListTile(
                   leading: Icon(Icons.account_circle),
                   title: Text("Perfis"),
-                  subtitle: Text("Configuração de funcionarios"),
+                  subtitle: Text("Controle de funcionarios"),
                   trailing: Icon(Icons.arrow_forward),
                   onTap: () {
-                  }
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                        builder: (context) => ControlFuncionarios(),
+                        )
+                    );
+                  },
               ),
               //Container(
 
@@ -49,7 +56,7 @@ class PaginaPrincipalVendedor extends StatelessWidget {
                   Navigator.push(
                   context,
                       MaterialPageRoute(
-                          builder: (context) => ModProdutosPage(),
+                          builder: (context) => CadastroProdutos(),
                       )
                   );
                 },
@@ -59,7 +66,4 @@ class PaginaPrincipalVendedor extends StatelessWidget {
       ),
     );
   }
-}
-
-_ModProdutosPage() {
 }

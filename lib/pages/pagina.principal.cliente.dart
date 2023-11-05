@@ -1,7 +1,7 @@
 
 //import 'dart:js_interop';
 import 'package:app_beacon_teste/pages/lista.desejo.dart';
-import 'package:app_beacon_teste/pages/perfil.page.dart';
+import 'package:app_beacon_teste/pages/perfil.cliente.dart';
 import 'package:flutter/material.dart';
 
 class PaginaPrincipalCliente extends StatelessWidget {
@@ -46,7 +46,7 @@ class PaginaPrincipalCliente extends StatelessWidget {
                     onTap: () {
                       Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Perfil(),
+                          MaterialPageRoute(builder: (context) => PerfilCliente(),
                           )
                       );
                     }
@@ -57,6 +57,11 @@ class PaginaPrincipalCliente extends StatelessWidget {
                   subtitle: const Text(""),
                   trailing: const Icon(Icons.arrow_forward),
                   onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ListaDesejo(),
+                      )
+                    );
                     },
                 ),
               ]
@@ -65,40 +70,4 @@ class PaginaPrincipalCliente extends StatelessWidget {
       ),
     );
   }
-  }
-
-Widget cardItem() {
-  return Card(
-    child: Column(
-      mainAxisSize: MainAxisSize.min,
-      children: <Widget>[
-        const ListTile(
-          leading: CircleAvatar(
-          ),
-          title: Text("LOJA TAL TESTEEE"),
-          subtitle: Text("09/05/2019 18:37"),
-          trailing: Icon(Icons.more_vert),
-        ),
-        //Image.asset("assets/images/exemplo-icon-desejo-list.png"), //NAO ESTA FUNCIONANDOO
-        Container(
-            padding: const EdgeInsets.all(10),
-            child: const Text(
-                "DESCRIÇAO DO PRODUTO E PRÇOS"
-            )
-        ),
-        ButtonBar(
-          children: <Widget>[
-            TextButton(
-              child: const Icon(Icons.favorite),
-              onPressed: () {},
-            ),
-            TextButton(
-              child: const Icon(Icons.share),
-              onPressed: () {},
-            ),
-          ],
-        ),
-      ],
-    ),
-  );
 }
